@@ -1,0 +1,11 @@
+C:\Users\Administrator.INTJPBAGONA\Documents\Visual Studio 2012\SMDC\SMDC_Site\bin\SMDC_Site.dll
+C:\Users\Administrator.INTJPBAGONA\Documents\Visual Studio 2012\SMDC\SMDC_Site\bin\SMDC_Site.pdb
+C:\Users\Administrator.INTJPBAGONA\Documents\Visual Studio 2012\SMDC\SMDC_Site\obj\Debug\SMDC_Site.dll
+C:\Users\Administrator.INTJPBAGONA\Documents\Visual Studio 2012\SMDC\SMDC_Site\obj\Debug\SMDC_Site.pdb
+C:\Users\Administrator.INTJPBAGONA\Documents\Visual Studio 2012\SMDC\SMDC_Site\obj\Debug\SMDC_Site.csprojResolveAssemblyReference.cache
+C:\Users\jabagona.DEVCMS\Desktop\SMDC\SMDC_Site\bin\SMDC_Site.dll.config
+C:\Users\jabagona.DEVCMS\Desktop\SMDC\SMDC_Site\bin\SMDC_Site.dll
+C:\Users\jabagona.DEVCMS\Desktop\SMDC\SMDC_Site\bin\SMDC_Site.pdb
+C:\Users\jabagona.DEVCMS\Desktop\SMDC\SMDC_Site\obj\Debug\SMDC_Site.csprojResolveAssemblyReference.cache
+C:\Users\jabagona.DEVCMS\Desktop\SMDC\SMDC_Site\obj\Debug\SMDC_Site.dll
+C:\Users\jabagona.DEVCMS\Desktop\SMDC\SMDC_Site\obj\Debug\SMDC_Site.pdb

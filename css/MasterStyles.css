@@ -1,0 +1,157 @@
+﻿.box {
+    border: 1px red dotted;
+}
+
+/*body style*/
+body {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    padding-top: 70px;
+}
+
+/*navbar style*/
+nav.navbar {
+    background-color: #039ECA;
+}
+
+/*navbar style*/
+.navbar-dark .navbar-nav > li > a {
+    color: #039ECA;
+}
+
+/*footer style*/
+footer {
+    background-color: #039ECA;
+}
+/*default container style*/
+.container {
+    max-width: 1000px;
+}
+
+/*container style for Contact page*/
+.container2 {
+    max-width: 800px;
+}
+
+/*text style for Labels*/
+.txtLbl {
+    font-weight: lighter;
+    font-size: 30px;
+    margin: auto;
+}
+
+/*add padding inside bg-white*/
+.bg-white {
+    padding: 50px;
+}
+
+/*border style*/
+hr.style1 {
+    border-top: 3px double #8c8b8b;
+    width: 70%;
+}
+
+/*hover style*/
+img.rounded.img-fluid:hover{
+    opacity: 0.8;
+}
+
+/*hover style on drop down*/
+/*ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}*/
+
+/*hover style on drop down*/
+/*@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}*/
+
+/*hr.style2 {
+    border-top: 3px double #8c8b8b;
+    width: 50%;
+}*/
+
+/*.card, .card-body, .bg-light {
+    max-height: 100%;
+}*/
+
+/*palceholder text styles*/
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+/*palceholder text styles*/
+:-moz-placeholder {
+    font-style: italic;
+}
+/*palceholder text styles*/
+::-moz-placeholder {
+    font-style: italic;
+}
+/*palceholder text styles*/
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+/*For Icons in Contact Us*/
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+}
+
+/* YouTube */
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+/*for error validation*/
+.validateInput {
+    border-color: red;
+}
+
+/*for dropdown menu*/
+.navbar-nav > li > .dropdown-menu { 
+    background-color: #039ECA;
+    color: whitesmoke;
+    min-width: 350px;
+    text-align: center;
+}
+
+p.text-center {
+    margin-bottom: 0px;
+}
+
+p.text-muted {
+    font-size: 14px;
+}
