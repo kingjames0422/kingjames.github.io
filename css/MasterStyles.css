@@ -173,3 +173,14 @@ p.text-muted {
     background-color: #072548;
     color: whitesmoke;
 }
+
+/*recaptcha*/
+#recaptcha_area {
+        margin: 15px auto !important;
+        width: auto !important;
+        height: auto !important;
+        text-align: -webkit-center;
+        text-align: -moz-center;
+        text-align: -o-center;
+        text-align: -ms-center;
+}

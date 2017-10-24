@@ -9,10 +9,12 @@
     <link href="libraries/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="libraries/Font-Awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="libraries/Toastr/toastr.min.css" rel="stylesheet" />
     <link href="css/MasterStyles.css" rel="stylesheet" />
     <script src="libraries/JQuery/jquery-3.2.1.min.js"></script>
     <script src="../libraries/Proper/popper.min.js"></script>
     <script src="libraries/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="libraries/Toastr/toastr.min.js"></script>
     <script src="scripts/MasterScript.js"></script>
 </head>
 <body>
@@ -83,11 +85,14 @@
                                     <input type="text" class="form-control" id="txtMobileNum" placeholder ="Enter Your Mobile Number" maxlength="30" name="clientMobileNum" />
                                 </p>
                                 <p>
-                                    <input type="text" class="form-control" id="txtProjectName" placeholder ="Enter Name of Project You're Interested In" maxlength="100" name="projectName" />
+                                    <input type="text" class="form-control" id="txtProjectName" placeholder ="Project You're Interested In" maxlength="100" name="projectName" />
                                 </p>
                                 <p>
                                     <input type="text" class="form-control" id="txtMessage" placeholder ="Enter Your Message" maxlength="500" name="clientMessage" />
                                 </p>
+                                <div class="text-md-center">
+                                    <recaptcha:RecaptchaControl ID="recaptcha" runat="server" PublicKey="6LdonjUUAAAAAO8O0_1bizlQO7xKwCl5Ut4oAMA_" PrivateKey="6LdonjUUAAAAACvKg-4aueOGyvqqPOEzJwKyhJ6H" />
+                                </div>
                                 <p>
                                     <input type="button" id="btnSubmit" class="btn btn-block" onclick="sendInquiry()" value="Submit" />
                                 </p>

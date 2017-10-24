@@ -1,4 +1,4 @@
-﻿var $name = "#txtName"; var $email = "#txtEmail"; var $number = "#txtMobileNum"; var $projName = "#txtProjectName"; var $message = "#txtMessage"
+﻿var $name = "#txtName"; var $email = "#txtEmail"; var $number = "#txtMobileNum"; var $projName = "#txtProjectName"; var $message = "#txtMessage"; var $recaptcha = "#recaptcha_response_field";
 
 $(document).ready(function () {
     $(".carousel").carousel({
@@ -12,6 +12,8 @@ function sendInquiry() {
     var num = $("#txtMobileNum").val();
     var project = $("#txtProjectName").val();
     var message = $("#txtMessage").val();
+    var challengeValue = Recaptcha.get_challenge();
+    var responseValue = Recaptcha.get_response();
 
     var isFormValid = hasError();
 
@@ -19,19 +21,27 @@ function sendInquiry() {
         $.ajax({
             type: 'POST',
             url: 'Contact.aspx/submitInquiry',
-            data: '{"clientName":"' + name + '", "clientEmail":"' + email + '", "mobileNum":"' + num + '", "projectName":"' + project + '", "inquiryMessage":"' + message + '"}',
+            data: '{"clientName":"' + name + '", "clientEmail":"' + email + '", "mobileNum":"' + num + '", "projectName":"' + project + '", "inquiryMessage":"' + message + '", "challengeValue":"' + challengeValue + '", "responseValue":"' + responseValue + '"}',
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function (data) {
-                window.alert(data.d);
-                $($name).val("");
-                $($email).val("");
-                $($number).val("");
-                $($projName).val("");
-                $($message).val("");
+                //window.alert(data.d);
+                Recaptcha.reload();
+                if (data.d.indexOf("reCaptcha") != -1) {
+                    $($recaptcha).val("");
+                    toastr.error("Please provide a value for reCaptcha.")
+                } else {
+                    $($name).val("");
+                    $($email).val("");
+                    $($number).val("");
+                    $($projName).val("");
+                    $($message).val("");
+                    $($recaptcha).val("");
+                }
             },
             error: function (error) {
                 window.alert(error.d);
+                Recaptcha.reload();
             }
         });
     }
@@ -50,31 +60,46 @@ function hasError() {
     if (clientName.length <= 0) {
         $($name).addClass("validateInput");
         $($name).val("");
+        toastr.error("Please provide your Name.")
     }
     if (clientEmail.length <= 0) {
         $($email).addClass("validateInput");
         $($email).val("");
+        toastr.error("Please provide an e-mail address.")
+    } else if (!isValid) {
+        $($email).addClass("validateInput");
+        $($email).val("");
+        toastr.error("Please provide a valid e-mail address.")
     }
     if (mobileNum.length <= 0) {
         $($number).addClass("validateInput");
         $($number).val("");
+        toastr.error("Please provide your Mobile Number.")
+    } else if (!$.isNumeric(mobileNum)) {
+        $($number).addClass("validateInput");
+        $($number).val("");
+        toastr.error("Please provide a valid Mobile Number.")
     }
     if (projectName.length <= 0) {
         $($projName).addClass("validateInput");
         $($projName).val("");
+        toastr.error("Please provide a property you're interested in.")
     }
     if (inquiryMessage.length <= 0) {
         $($message).addClass("validateInput");
         $($message).val("");
+        toastr.error("Please provide your inquiry message.")
     }
-    if (!$.isNumeric(mobileNum)) {
-       $($number).addClass("validateInput");
-       $($number).val("");
-    }
-    if (!isValid) {
-        $($email).addClass("validateInput");
-        $($email).val("");
-    } 
+    //if (!$.isNumeric(mobileNum)) {
+    //   $($number).addClass("validateInput");
+    //   $($number).val("");
+    //    toastr.error("Please provide a valid Mobile Number.")
+    //}
+    //if (!isValid) {
+    //    $($email).addClass("validateInput");
+    //    $($email).val("");
+    //    toastr.error("Please provide a valid e-mail address.")
+    //} 
 
     if ($("body").find(".validateInput").length) {
         return false;
