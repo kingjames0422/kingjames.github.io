@@ -11,7 +11,7 @@ body {
 
 /*navbar style*/
 nav.navbar {
-    background-color: #02353e;  /*#039ECA;*/
+    background-color: #031833;  /*#039ECA;*/
 }
 
 /*navbar style*/
@@ -26,7 +26,7 @@ nav.navbar {
 
 /*footer style*/
 footer {
-    background-color: #02353e;
+    background-color: #031833;
 }
 /*default container style*/
 .container {
@@ -154,7 +154,7 @@ img.rounded.img-fluid
 
 /*for dropdown menu*/
 .navbar-nav > li > .dropdown-menu { 
-    background-color: #02353e;
+    background-color: #031833;
     color: whitesmoke;
     min-width: 350px;
     text-align: center;
@@ -170,7 +170,7 @@ p.text-muted {
 
 /*button submit style*/
 #btnSubmit{
-    background-color: #02353e;
+    background-color: #031833;
     color: whitesmoke;
 }
 
