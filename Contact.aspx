@@ -139,7 +139,7 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12 mx-auto">
                     <!--Footer Bottom-->
-                    <p class="text-center">Copyright &copy; SMDC Prime Condo PH 2017</p>
+                    <p class="text-center">Copyright &copy; SMDC Prime Condo PH 2019</p>
                 </div>
             </div>
         </div>
